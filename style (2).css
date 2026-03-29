@@ -1,0 +1,252 @@
+/* ========================================
+   WEATHER DASHBOARD - CUSTOM CSS
+   Using Bootstrap 5 Framework
+   ======================================== */
+
+/* Body Styling */
+body {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Navbar Customization */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Search Card */
+.card {
+    border-radius: 15px;
+    border: none;
+}
+
+.card-title {
+    color: #2d3748;
+    font-weight: 600;
+}
+
+/* Input Group Styling */
+.input-group {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#cityInput {
+    border: 2px solid #e2e8f0;
+    padding: 12px 20px;
+    font-size: 16px;
+}
+
+#cityInput:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+#searchBtn {
+    padding: 12px 30px;
+    font-weight: 600;
+    background: #667eea;
+    border: none;
+}
+
+#searchBtn:hover {
+    background: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+/* Weather Card Styling */
+.weather-card {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.weather-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* City Header */
+.city-header {
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.city-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 5px;
+}
+
+.country-code {
+    font-size: 1rem;
+    color: #718096;
+    font-weight: 500;
+}
+
+/* Weather Icon and Temperature */
+.weather-main {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.weather-icon {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+}
+
+.temperature {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #e53e3e;
+    margin: 10px 0;
+}
+
+.weather-description {
+    font-size: 1.2rem;
+    color: #4a5568;
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+/* Weather Details Section */
+.weather-details {
+    background: #f7fafc;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.detail-row:last-child {
+    border-bottom: none;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #4a5568;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.detail-value {
+    font-weight: 700;
+    color: #2d3748;
+    font-size: 1.1rem;
+}
+
+/* AQI Badge Styling */
+.aqi-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: white;
+}
+
+/* AQI Level Colors */
+.aqi-good {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+}
+
+.aqi-fair {
+    background: linear-gradient(135deg, #4299e1, #3182ce);
+}
+
+.aqi-moderate {
+    background: linear-gradient(135deg, #ecc94b, #d69e2e);
+}
+
+.aqi-poor {
+    background: linear-gradient(135deg, #ed8936, #dd6b20);
+}
+
+.aqi-very-poor {
+    background: linear-gradient(135deg, #f56565, #e53e3e);
+}
+
+/* Icon Styling */
+.detail-label i {
+    font-size: 1.2rem;
+    color: #667eea;
+}
+
+/* Loading Spinner */
+#loadingSpinner {
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* Error Alert */
+#errorAlert {
+    animation: slideDown 0.3s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .city-name {
+        font-size: 1.5rem;
+    }
+    
+    .temperature {
+        font-size: 2.8rem;
+    }
+    
+    .weather-icon {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .weather-card {
+        margin-bottom: 20px;
+    }
+}
+
+/* Footer Info Card */
+.bg-light {
+    background: rgba(255, 255, 255, 0.95) !important;
+}
